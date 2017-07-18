@@ -3,12 +3,11 @@ $(document).ready( function(){
   // var dot = $("#dot");
   var hbtn = $("#hireBtn");
   var cbtn = $("#contactBtn");
+  var actioncall = $("#actioncall");
 
   hbtn.on('click', function(){
 
-    // console.log("scrollTop cbn: ",cbtn.offset().top);
-
-    $('window').scrollTo( $("#actioncall") );
+    $.scrollTo( actioncall, { duration: '0.8s' } );
 
   });
 
