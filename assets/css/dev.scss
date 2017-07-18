@@ -289,6 +289,13 @@ body{
       align-content: center;
     }
 
+    #signseal {
+      // border: 1px solid red;
+      width: 375px;
+      padding: 0px;
+      margin: 0 auto;
+    }
+
     .centerFoot{
       text-align: center;
 
@@ -311,15 +318,23 @@ body{
     }
 
     #signature {
+      float: left;
+      margin-top: 20px;
       background-image: $signature;
       background-repeat: no-repeat;
       height: 54px;
+      width: 270px;
+      // border: 1px solid orange;
     }
 
     #seal {
+      margin-left: 20px;
+      float: left;
       background-image: $seal;
       background-repeat: no-repeat;
       height: 100px;
+      width: 80px;
+      // border: 1px solid orange;
     }
 
     a {

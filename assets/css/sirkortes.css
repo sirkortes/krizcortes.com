@@ -2489,6 +2489,10 @@ body {
 #footer .row {
   align-items: center;
   align-content: center; }
+#footer #signseal {
+  width: 375px;
+  padding: 0px;
+  margin: 0 auto; }
 #footer .centerFoot {
   text-align: center; }
   #footer .centerFoot p {
@@ -2502,13 +2506,19 @@ body {
   #footer .centerFoot #socialmedia {
     margin: 0 auto; }
 #footer #signature {
+  float: left;
+  margin-top: 20px;
   background-image: url("../img/signature.svg");
   background-repeat: no-repeat;
-  height: 54px; }
+  height: 54px;
+  width: 270px; }
 #footer #seal {
+  margin-left: 20px;
+  float: left;
   background-image: url("../img/seal.svg");
   background-repeat: no-repeat;
-  height: 100px; }
+  height: 100px;
+  width: 80px; }
 #footer a i {
   color: #f1f1f1; }
 #footer a button {
