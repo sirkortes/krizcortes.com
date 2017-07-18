@@ -72,6 +72,10 @@ body{
     margin: 60px 0;
     padding: 10px;
   }
+
+  button {
+    cursor: pointer;
+  }
 }
 
 /* LANDING */
@@ -223,28 +227,55 @@ body{
     color: $color-back;
     background-color: $color-accent;
     text-align: center;
+    padding: 60px;
 
     h1 {
-      margin: 30px 0;
+      margin: 40px 0;
     }
     
-    button {
-      margin-top: 40px;
-      border-radius: 20px;
-      padding: 10px 20px;
-      font-size: 14px;
-      // letter-spacing: 1px;
-      color: $color-back;
+    #contactBtn {
+      border: 1px solid black;
+      width: 250px;
+      margin: 40px auto;
+      height: 40px;
+      border-radius: 50px;
+      align-content: center;
+      padding-top: 6px;
+      cursor: pointer;
+
+      color: $color-primary;
       border-color: $color-back;
-      background-color: $color-accent;
+      background-color: $color-back;
+      
+      transition: all 0.1s ease-in;
     }
 
-    button:hover {
+    #contactBtn:hover,
+    #contactBtn:active,
+    #contactBtn:focus {
+      color: $color-back;
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    button:hover, button:focus, button:active {
+      outline: none;
       padding: 10px 26px;
-      // font-size: 15px;
       letter-spacing: 1px;
-      color: $color-accent;
-      background-color: $color-back;
+      color: $color-back;
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    #dot {
+      border: 1px solid red;
+      transform: translateY(60px);
+      background-color: $color-primary;
+      width: 5px;
+      height: 5px;
+      margin: 0 auto;
+      border-radius: 25px;
+      transition: all 1s ease;
     }
 
   }
@@ -256,6 +287,27 @@ body{
     .row{
       align-items: center;
       align-content: center;
+    }
+
+    .centerFoot{
+      text-align: center;
+
+      p {
+        margin: 0 auto;
+        color: #666;
+        font-size: 0.7rem;
+
+        a {
+          color: #666;
+          font-size: 0.7rem;
+          text-decoration: none;
+        }
+      }
+
+      #socialmedia{
+        margin: 0 auto;
+      }
+
     }
 
     #signature {
@@ -270,12 +322,20 @@ body{
       height: 100px;
     }
 
-    button {
-      color: $color-primary;
-    }
+    a {
+      i {
+          color: $color-primary;
+        }
 
-    button:hover {
-      color: $color-accent;
+        button {
+          outline: none;
+        }
+      }
+
+    a:hover, a:focus, a:active {
+      i {
+        color: $color-accent;
+      }
     }
 
   }
