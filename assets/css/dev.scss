@@ -45,19 +45,21 @@ body {
   }
 
   h2 {
-    font-size: 1.3rem;
+    color: $color-accent;
+    font-size: 1.7rem;
     // font-weight: bold;
     text-align: center;
     letter-spacing: 0.9px;
+    margin: 80px 0;
   }
 
   h3 {
     color: $color-accent;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: normal;
-    letter-spacing: 0.3px;
+    // letter-spacing: 0.3px;
     text-align: center;
-    margin: 40px auto;
+    margin: 60px auto;
   }
 
   h4 {
@@ -212,6 +214,10 @@ body {
       margin: 100px auto 80px auto;
     }
 
+    #typetext {
+      margin: 0 0 60px 0;
+    }
+
   }
   
 /* SKILLS */
@@ -219,22 +225,22 @@ body {
   #skills {
 
     // border: 1px solid blue;
+    
+    @include f-alignhorz(center);
+    @include f-alignvert(center);
 
     padding-top: 20px;
 
     h3 {
       margin-bottom: 40px;
-      // font-weight: 100;
-    }
-
-    .row {
-      // change for bigger sizes
-      // padding: 20px;
+      font-weight: normal;
     }
 
     .skillpair {
-      // border: 1px solid red;
+
       @include f-alignhorz(space-around);
+      max-width: 1200px;
+
     }
 
     .card {
@@ -242,8 +248,8 @@ body {
       // border: 1px solid orange;
       
       @include f-size(5);
-      @include f-alignhorz(space-around);
-      max-width: 600px;
+      @include f-alignhorz(center);
+      max-width: 400px;
       min-width: 300px;
       padding: 20px;
       background-color: $color-back;
