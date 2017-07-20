@@ -79,18 +79,21 @@ body {
     flex-direction: column;
   }
 
-  button {
+  a {
     cursor: pointer;
   }
+
 }
 
 .btn {
   width: 250px;
   // margin: 50px auto;
+  border: 1px solid $color-accent;
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 14px;
   text-decoration: none;
+  transition: all 0.1s ease-in;
 }
 
 .btn-icon {
@@ -187,7 +190,7 @@ body {
 
 
     #hireBtn {
-      
+      width: 300px;
       margin: 40px auto;
       color: $color-primary;
       border-color: $color-accent;
@@ -196,7 +199,7 @@ body {
 
     #hireBtn:hover {
 
-      // padding: 10px 26px;
+      padding: 10px 26px;
       letter-spacing: 1px;
       color: $color-back;
       background-color: $color-accent;

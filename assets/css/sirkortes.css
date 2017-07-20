@@ -2361,15 +2361,17 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: column; }
-  body button {
+  body a {
     cursor: pointer; }
 
 .btn {
   width: 250px;
+  border: 1px solid #c8f26d;
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 14px;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.1s ease-in; }
 
 .btn-icon {
   width: 40px;
@@ -2416,11 +2418,13 @@ body {
   background-position: top center;
   background-repeat: repeat-y; }
   #landing #hireBtn {
+    width: 300px;
     margin: 40px auto;
     color: #f1f1f1;
     border-color: #c8f26d;
     background-color: #212121; }
   #landing #hireBtn:hover {
+    padding: 10px 26px;
     letter-spacing: 1px;
     color: #212121;
     background-color: #c8f26d; }
