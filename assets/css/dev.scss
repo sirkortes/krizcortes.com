@@ -19,11 +19,14 @@ $stars: url('../img/stars.svg');
   letter-spacing: 0.3px;
 }
 
-body{
+body {
+  margin: auto;
+  padding: 0;
+  max-width: 99%;
   background-color: $color-back;
   color: $color-primary;
   // font-family: 'Slabo 27px', serif;
-  // font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   // font-family: 'Lato', sans-serif;
   // font-family: 'Muli', sans-serif;
@@ -49,10 +52,12 @@ body{
   }
 
   h3 {
+    color: $color-accent;
     font-size: 1.1rem;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 0.3px;
     text-align: center;
+    margin: 40px auto;
   }
 
   h4 {
@@ -69,8 +74,9 @@ body{
   }
 
   section{
-    margin: 60px 0;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   button {
@@ -78,140 +84,256 @@ body{
   }
 }
 
+.btn {
+  width: 250px;
+  // margin: 50px auto;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.btn-icon {
+  width: 40px;
+  margin: 20px auto;
+  font-size: 24px;
+  color: $color-primary;
+  background-color: rgba(0,0,0,0);
+  outline: 0;
+  border: 0;
+}
+
+
+
+/* FLEX */
+
+  .col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .wrap {
+     -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+
+  .flex {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+
+  @mixin f-size($n){
+
+    -webkit-box-flex: $n;
+    -moz-box-flex: $n;
+    width: ($n * 20%);
+    -webkit-flex: $n;
+    -ms-flex: $n;
+    flex: $n;
+  }
+
+  @mixin f-order($n){
+
+    -webkit-box-ordinal-group: $n;
+    -moz-box-ordinal-group: $n;
+    -ms-flex-order: $n;
+    -webkit-order: $n;
+    order: $n;
+  }
+  
+  // flex-start | flex-end | center | space-between | space-around | stretch
+  @mixin f-alignvert($pos){
+    -webkit-box-align: $pos;
+       -ms-flex-align: $pos;
+          align-items: $pos;
+  }
+  
+  @mixin f-alignhorz($pos){
+
+    // -ms-flex-line-pack: $pos;
+         // align-content: $pos;
+      -webkit-box-pack: $pos;
+         -ms-flex-pack: $pos;
+       justify-content: $pos;
+  }
+
 /* LANDING */
   
   #landing {
-    // border: 1px solid red;
+
+    border: 1px solid red;
+
+    @include f-alignvert(center);
+    // @include f-alignhorz(center);
+    
     text-align: center;
     background-image: $stars;
     background-color: $color-back;
-    background-size: 100%;
-    background-position: 0 -90px;
-    background-repeat: no-repeat;
+    background-size: 1300px;
+    background-position: top center;
+    background-repeat: repeat-y;
 
-    button {
-      margin-top: 80px;
-      border-radius: 20px;
-      padding: 10px 20px;
-      font-size: 14px;
-      // letter-spacing: 1px;
+
+    #hireBtn {
+      
+      margin: 40px auto;
       color: $color-primary;
       border-color: $color-accent;
       background-color: $color-back;
     }
 
-    button:hover {
-      padding: 10px 26px;
-      // font-size: 15px;
+    #hireBtn:hover {
+
+      // padding: 10px 26px;
       letter-spacing: 1px;
       color: $color-back;
       background-color: $color-accent;
     }
 
+    #logotop{
+      width: 70px;
+      height: 88px;
+      background-image: $logo;
+      margin: 100px auto 80px auto;
+    }
+
   }
   
-  #logotop{
-    width: 70px;
-    height: 88px;
-    background-image: $logo;
-    margin: 100px auto 80px auto;
-  }
-
 /* SKILLS */
 
   #skills {
 
     // border: 1px solid blue;
+
     padding-top: 20px;
 
     h3 {
       margin-bottom: 40px;
+      font-weight: 100;
     }
 
     .row {
-      padding: 20px;
+      // change for bigger sizes
+      // padding: 20px;
+    }
+
+    .skillpair {
+      // border: 1px solid red;
+      @include f-alignhorz(space-around);
     }
 
     .card {
+      
+      // border: 1px solid orange;
+      
+      @include f-size(5);
+      @include f-alignhorz(space-around);
+      max-width: 600px;
+      min-width: 300px;
+      padding: 20px;
       background-color: $color-back;
-      border: none;
       text-align: center;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
 
       i {
-        margin: 0 0 10px 0;
         font-size: 40px;
         color: $color-accent;
       }
-      .card-block{
-        // text-align: center;
-      }
-
-      img { 
-        margin: 0 0 12px 0;
-      }
-
-      p {
-        text-align: center;
-      }
     }
+
   }
 
 /* PROJECTS */
 
   #projects {
 
-    .row {
-      padding: 20px;
-    }
-    
-    h2{
-      margin-bottom: 50px;
-    }
+    border: 1px solid blue;
+  
+    @include f-alignvert(center);
+    @include f-alignhorz(center);
 
-    article {
-      // border: 1px solid green; 
-      margin: 20px 0;
-    }
+    .project {
 
-    .project-info{
-      // border: 1px solid red; 
-      padding: 50px 40px;
+      border: 1px solid green; 
+      
+      @include f-alignvert(center);
+      @include f-alignhorz(center);
+      
+      // add these to @media bigger
+      // padding: 50px;
+      // margin: 20px 0;
 
-      ul {
-        @include text;
-        margin: 20px 0 0 0;
-        padding-left: 15px;
-        list-style: none;
+      .project-info{
 
-        li {
-          font-size: 0.8rem;
-          line-height: 18px;
-          margin-bottom: 9px;
+        border: 1px solid red; 
+        
+        @include f-order(1);
+        @include f-size(2);
+        @include f-alignvert(center);
+        @include f-alignhorz(center);
+
+        max-width: 600px;
+        min-width: 360px;
+        // padding: 20px;
+
+        ul {
+
+          @include text;
+          margin: 20px 0 0 0;
+          // padding-left: 15px;
+          list-style: none;
+
+          li {
+
+            font-size: 0.8rem;
+            line-height: 18px;
+            margin-bottom: 9px;
+          }
         }
+
+      }
+
+      .project-img {
+        
+        border: 1px solid white; 
+        
+        max-width: 500px;
+        min-width: 350px;
+        @include f-order(2);
+        @include f-size(1);
+        @include f-alignhorz(start);
+      }
+
+      #pledgeit_gif{
+        margin-top: 55px;
+        width: 370px
+      }
+      
+      #bombergames_gif{
+        width: 370px
+      }
+
+      #netpods_gif {
+        margin-top: 20px;
+        width: 370px
       }
 
     }
-
-    #pledgeit_gif{
-      margin-top: 55px;
-      width: 370px
-    }
     
-    #bombergames_gif{
-      width: 350px
-    }
-
-    #netpods_gif {
-      margin-top: 20px;
-      width: 360px
-    }
-
-
-    .project-img {
-      padding: 0;
-    }
-
-
   }
 
 /* PORTFOLIO */
@@ -227,20 +349,18 @@ body{
     color: $color-back;
     background-color: $color-accent;
     text-align: center;
-    padding: 60px;
+    padding: 40px;
+    @include f-alignhorz(center);
+    @include f-alignvert(center);
 
-    h1 {
-      margin: 40px 0;
+    h3 { 
+      color: $color-back;
     }
     
     #contactBtn {
-      border: 1px solid black;
+
       width: 250px;
-      margin: 40px auto;
-      height: 40px;
       border-radius: 50px;
-      align-content: center;
-      padding-top: 6px;
       cursor: pointer;
 
       color: $color-primary;
@@ -284,74 +404,62 @@ body{
 
   #footer {
     
-    .row{
-      align-items: center;
-      align-content: center;
+    @include f-alignvert(center);
+    @include f-alignhorz(center);
+    text-align: center;
+    color: #666;
+    padding: 20px 0;
+    // font-size: 0.5rem;
+    
+    p {
+      font-size: 0.8rem;
+      margin: 5px auto;
+    }
+
+    a { 
+
+      color: #666;
+      text-decoration: none;
+      margin: 0 3px;
+      padding: 0;
+
+      i { 
+        color: $color-primary; 
+        font-size: 1.2rem;
+      }
+    }
+
+    a:hover, a:focus, a:active {
+
+      color: $color-primary;
+      i { 
+        color: $color-accent; 
+      }
     }
 
     #signseal {
-      // border: 1px solid red;
-      width: 375px;
-      padding: 0px;
-      margin: 0 auto;
-    }
+      
+      @include f-alignhorz(space-around);
+      @include f-alignvert(center);
+      min-width: 300px;
+      margin-bottom: 10px;
 
-    .centerFoot{
-      text-align: center;
+      #signature {
 
-      p {
-        margin: 0 auto;
-        color: #666;
-        font-size: 0.7rem;
-
-        a {
-          color: #666;
-          font-size: 0.7rem;
-          text-decoration: none;
-        }
+        background-image: $signature;
+        background-repeat: no-repeat;
+        min-width: 200px;
+        min-height: 50px;
       }
 
-      #socialmedia{
-        margin: 0 auto;
+      #seal {
+    
+        background-image: $seal;
+        background-repeat: no-repeat;
+        min-height: 70px;
+        min-width: 70px;
       }
-
-    }
-
-    #signature {
-      float: left;
-      margin-top: 20px;
-      background-image: $signature;
-      background-repeat: no-repeat;
-      height: 54px;
-      width: 270px;
-      // border: 1px solid orange;
-    }
-
-    #seal {
-      margin-left: 20px;
-      float: left;
-      background-image: $seal;
-      background-repeat: no-repeat;
-      height: 100px;
-      width: 80px;
-      // border: 1px solid orange;
-    }
-
-    a {
-      i {
-          color: $color-primary;
-        }
-
-        button {
-          outline: none;
-        }
-      }
-
-    a:hover, a:focus, a:active {
-      i {
-        color: $color-accent;
-      }
-    }
+    }      
 
   }
 

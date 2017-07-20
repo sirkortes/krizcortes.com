@@ -7,7 +7,7 @@ $(document).ready( function(){
 
   hbtn.on('click', function(){
 
-    $.scrollTo( actioncall, { duration: '0.8s' } );
+    $.scrollTo( actioncall, { duration: '0.5s' } );
 
   });
 
