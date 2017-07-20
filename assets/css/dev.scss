@@ -68,7 +68,7 @@ body {
   }
 
   h5 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 300;
     letter-spacing: 0.3px;
   }
@@ -127,11 +127,11 @@ body {
   }
 
   .flex {
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
   }
 
   @mixin f-size($n){
@@ -173,7 +173,7 @@ body {
   
   #landing {
 
-    border: 1px solid red;
+    // border: 1px solid red;
 
     @include f-alignvert(center);
     // @include f-alignhorz(center);
@@ -261,25 +261,31 @@ body {
 
   #projects {
 
-    border: 1px solid blue;
+    // border: 1px solid blue;
   
     @include f-alignvert(center);
     @include f-alignhorz(center);
 
     .project {
 
-      border: 1px solid green; 
+      // border: 1px solid green; 
       
       @include f-alignvert(center);
       @include f-alignhorz(center);
-      
-      // add these to @media bigger
-      // padding: 50px;
-      // margin: 20px 0;
+      text-align: center;
+
+      h4 { 
+        margin-bottom: 0; 
+      }
+
+      h5 {
+        margin: 15px 0;
+        color: $color-accent;
+      }
 
       .project-info{
 
-        border: 1px solid red; 
+        // border: 1px solid red; 
         
         @include f-order(1);
         @include f-size(2);
@@ -288,20 +294,19 @@ body {
 
         max-width: 600px;
         min-width: 360px;
-        // padding: 20px;
 
         ul {
 
           @include text;
-          margin: 20px 0 0 0;
-          // padding-left: 15px;
+          margin: 0;
           list-style: none;
+          text-align: left;
 
           li {
 
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             line-height: 18px;
-            margin-bottom: 9px;
+            margin-bottom: 11px;
           }
         }
 
@@ -309,27 +314,38 @@ body {
 
       .project-img {
         
-        border: 1px solid white; 
+        // border: 1px solid white; 
         
         max-width: 500px;
-        min-width: 350px;
+        min-width: 370px;
         @include f-order(2);
         @include f-size(1);
-        @include f-alignhorz(start);
+        @include f-alignhorz(center);
+        @include f-alignvert(center);
       }
 
       #pledgeit_gif{
-        margin-top: 55px;
-        width: 370px
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../img/gif/pledgeitGIF.gif');
       }
       
       #bombergames_gif{
-        width: 370px
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../img/gif/BomberGames.gif');
       }
 
       #netpods_gif {
-        margin-top: 20px;
-        width: 370px
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../img/gif/netpodsGIF.gif');
       }
 
     }
@@ -355,6 +371,8 @@ body {
 
     h3 { 
       color: $color-back;
+      font-weight: normal;
+      margin-top: 0px;
     }
     
     #contactBtn {
@@ -362,6 +380,7 @@ body {
       width: 250px;
       border-radius: 50px;
       cursor: pointer;
+      margin-bottom: 20px;
 
       color: $color-primary;
       border-color: $color-back;

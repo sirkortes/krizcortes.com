@@ -11,15 +11,15 @@ $(document).ready( function(){
 
   });
 
-  cbtn.on('click', function(){
+  // cbtn.on('click', function(){
 
-    cbtn.html('').css({
-      width: '40px',
-      height: '40px',
-      padding: '0',
-      borderRadius: '20px'
-    });
+  //   cbtn.html('').css({
+  //     width: '40px',
+  //     height: '40px',
+  //     padding: '0',
+  //     borderRadius: '20px'
+  //   });
 
-  });
+  // });
 
 });

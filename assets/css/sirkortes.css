@@ -2354,7 +2354,7 @@ body {
     font-size: 0.95rem;
     letter-spacing: 0.9px; }
   body h5 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 300;
     letter-spacing: 0.3px; }
   body section {
@@ -2399,19 +2399,13 @@ body {
 
 .flex {
   display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+  display: flex; }
 
 /* LANDING */
 #landing {
-  border: 1px solid red;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2470,7 +2464,6 @@ body {
 
 /* PROJECTS */
 #projects {
-  border: 1px solid blue;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2478,15 +2471,19 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
   #projects .project {
-    border: 1px solid green;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
+    #projects .project h4 {
+      margin-bottom: 0; }
+    #projects .project h5 {
+      margin: 15px 0;
+      color: #c8f26d; }
     #projects .project .project-info {
-      border: 1px solid red;
       -webkit-box-ordinal-group: 1;
       -moz-box-ordinal-group: 1;
       -ms-flex-order: 1;
@@ -2511,16 +2508,16 @@ body {
         font-weight: 300;
         font-size: 0.9rem;
         letter-spacing: 0.3px;
-        margin: 20px 0 0 0;
-        list-style: none; }
+        margin: 0;
+        list-style: none;
+        text-align: left; }
         #projects .project .project-info ul li {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           line-height: 18px;
-          margin-bottom: 9px; }
+          margin-bottom: 11px; }
     #projects .project .project-img {
-      border: 1px solid white;
       max-width: 500px;
-      min-width: 350px;
+      min-width: 370px;
       -webkit-box-ordinal-group: 2;
       -moz-box-ordinal-group: 2;
       -ms-flex-order: 2;
@@ -2532,17 +2529,30 @@ body {
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: start; }
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
     #projects .project #pledgeit_gif {
-      margin-top: 55px;
-      width: 370px; }
+      height: 350px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../img/gif/pledgeitGIF.gif"); }
     #projects .project #bombergames_gif {
-      width: 370px; }
+      height: 350px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../img/gif/BomberGames.gif"); }
     #projects .project #netpods_gif {
-      margin-top: 20px;
-      width: 370px; }
+      height: 350px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../img/gif/netpodsGIF.gif"); }
 
 /* PORTFOLIO */
 #portfolio {
@@ -2561,11 +2571,14 @@ body {
   -ms-flex-align: center;
   align-items: center; }
   #actioncall h3 {
-    color: #212121; }
+    color: #212121;
+    font-weight: normal;
+    margin-top: 0px; }
   #actioncall #contactBtn {
     width: 250px;
     border-radius: 50px;
     cursor: pointer;
+    margin-bottom: 20px;
     color: #f1f1f1;
     border-color: #212121;
     background-color: #212121;
