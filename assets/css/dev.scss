@@ -54,7 +54,7 @@ body {
   h3 {
     color: $color-accent;
     font-size: 1.1rem;
-    font-weight: 100;
+    font-weight: normal;
     letter-spacing: 0.3px;
     text-align: center;
     margin: 40px auto;
@@ -224,7 +224,7 @@ body {
 
     h3 {
       margin-bottom: 40px;
-      font-weight: 100;
+      // font-weight: 100;
     }
 
     .row {

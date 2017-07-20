@@ -2345,7 +2345,7 @@ body {
   body h3 {
     color: #c8f26d;
     font-size: 1.1rem;
-    font-weight: 100;
+    font-weight: normal;
     letter-spacing: 0.3px;
     text-align: center;
     margin: 40px auto; }
@@ -2438,8 +2438,7 @@ body {
 #skills {
   padding-top: 20px; }
   #skills h3 {
-    margin-bottom: 40px;
-    font-weight: 100; }
+    margin-bottom: 40px; }
   #skills .skillpair {
     -webkit-box-pack: space-around;
     -ms-flex-pack: space-around;
