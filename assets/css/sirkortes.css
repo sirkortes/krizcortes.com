@@ -2407,14 +2407,30 @@ body {
   display: -webkit-flex;
   display: flex; }
 
+/* STARS */
+#stars {
+  min-height: 100%;
+  min-width: 900px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none; }
+  #stars #space {
+    min-width: 100%; }
+    #stars #space .star1 {
+      fill: #f1f1f1; }
+    #stars #space .star2 {
+      fill: #717399; }
+    #stars #space .star3 {
+      fill: #6C344D; }
+
 /* LANDING */
 #landing {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  background-image: url("../img/stars.svg");
-  background-color: #212121;
   background-size: 1300px;
   background-position: top center;
   background-repeat: repeat-y; }
@@ -2467,7 +2483,6 @@ body {
     max-width: 400px;
     min-width: 300px;
     padding: 20px;
-    background-color: #212121;
     text-align: center;
     align-items: center;
     align-content: center;
@@ -2560,7 +2575,7 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      background-image: url("../img/gif/BomberGames.gif"); }
+      background-image: url("../img/gif/BombermanDemo.gif"); }
     #projects .project #netpods_gif {
       height: 350px;
       background-repeat: no-repeat;
@@ -2573,7 +2588,7 @@ body {
   border: 1px solid blue; }
 
 /* ACTIONCALL */
-#actioncall {
+#actionCall {
   color: #212121;
   background-color: #c8f26d;
   text-align: center;
@@ -2584,11 +2599,11 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  #actioncall h3 {
+  #actionCall h3 {
     color: #212121;
     font-weight: normal;
     margin-top: 0px; }
-  #actioncall #contactBtn {
+  #actionCall #contactBtn {
     width: 250px;
     border-radius: 50px;
     cursor: pointer;
@@ -2597,20 +2612,20 @@ body {
     border-color: #212121;
     background-color: #212121;
     transition: all 0.1s ease-in; }
-  #actioncall #contactBtn:hover,
-  #actioncall #contactBtn:active,
-  #actioncall #contactBtn:focus {
+  #actionCall #contactBtn:hover,
+  #actionCall #contactBtn:active,
+  #actionCall #contactBtn:focus {
     color: #212121;
     background-color: #f1f1f1;
     border-color: #f1f1f1; }
-  #actioncall button:hover, #actioncall button:focus, #actioncall button:active {
+  #actionCall button:hover, #actionCall button:focus, #actionCall button:active {
     outline: none;
     padding: 10px 26px;
     letter-spacing: 1px;
     color: #212121;
     background-color: #f1f1f1;
     border-color: #f1f1f1; }
-  #actioncall #dot {
+  #actionCall #dot {
     border: 1px solid red;
     transform: translateY(60px);
     background-color: #f1f1f1;

@@ -3,6 +3,10 @@ $color-primary: #f1f1f1;
 $color-back: #212121;
 $color-accent: #c8f26d;
 
+$star1: #f1f1f1;
+$star2: #717399;
+$star3: #6C344D;
+
 $logo: url('../img/logo.svg');
 $signature: url('../img/signature.svg');
 $seal: url('../img/seal.svg');
@@ -25,13 +29,7 @@ body {
   max-width: 99%;
   background-color: $color-back;
   color: $color-primary;
-  // font-family: 'Slabo 27px', serif;
   font-family: 'Roboto', sans-serif;
-
-  // font-family: 'Lato', sans-serif;
-  // font-family: 'Muli', sans-serif;
-
-  // font-family: 'Nunito', sans-serif;
 
   p {
       @include text;
@@ -174,6 +172,30 @@ body {
        justify-content: $pos;
   }
 
+/* STARS */
+
+  #stars {
+
+    min-height: 100%;
+    min-width: 900px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events:none;
+
+    #space {
+
+      min-width: 100%;
+
+      .star1 { fill: $star1; }
+
+      .star2 { fill: $star2; }
+
+      .star3 { fill: $star3; }
+    }
+  }
+
 /* LANDING */
   
   #landing {
@@ -184,8 +206,8 @@ body {
     // @include f-alignhorz(center);
     
     text-align: center;
-    background-image: $stars;
-    background-color: $color-back;
+    // background-image: $stars;
+    // background-color: $color-back;
     background-size: 1300px;
     background-position: top center;
     background-repeat: repeat-y;
@@ -252,7 +274,7 @@ body {
       max-width: 400px;
       min-width: 300px;
       padding: 20px;
-      background-color: $color-back;
+      // background-color: $color-back;
       text-align: center;
       align-items: center;
       align-content: center;
@@ -346,7 +368,7 @@ body {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        background-image: url('../img/gif/BomberGames.gif');
+        background-image: url('../img/gif/BombermanDemo.gif');
       }
 
       #netpods_gif {
@@ -369,7 +391,7 @@ body {
 
 /* ACTIONCALL */
 
-  #actioncall {
+  #actionCall {
     
     color: $color-back;
     background-color: $color-accent;
